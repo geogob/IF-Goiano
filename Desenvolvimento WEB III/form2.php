@@ -11,11 +11,9 @@
 		<tr>
 			<th><a href="recebe2.php?valor=1">Cadastrar</a></th>
 			<th><a href="recebe2.php?valor=2">Consultar</a></th>
-			<th><a href="recebe2.php?valor=3">Excluir</a></th>
-			<th><a href="recebe2.php?valor=4">Atualizar</a></th>
+			<th><a href="#">Excluir</a></th>
+			<th><a href="#">Atualizar</a></th>
 		</tr>
 	</table>
-      
-
     </body>
 </html>

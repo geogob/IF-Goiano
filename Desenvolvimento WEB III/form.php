@@ -1,6 +1,6 @@
 <html lang="pt-br">
     <head>
-        <title> Nosso singelo formulário </title>
+        <title> DW3</title>
         <meta charset="utf-8">
     </head>
     <body>

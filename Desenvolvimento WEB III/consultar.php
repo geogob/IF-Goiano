@@ -19,8 +19,9 @@
 			echo '<tr>';
 			echo '<td> <i>'.$registro["Nome"].'</i></td>';
 			echo '<td> <b>'.$registro["Email"].'</b> </td>';
-			echo '<td> trash </td>';
-			echo '<td> update </td>';
+			$id = $registro["id_user"];
+			echo '<td> <a href="deletar.php?id='.$id.'">del</a> </td>';
+			echo '<td> <a href="atualizar.php?id='.$id.'">upd</a> </td>';
 			echo '</tr>';
 		}
 		echo '</table>';
