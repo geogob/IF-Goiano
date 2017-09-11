@@ -5,12 +5,12 @@
     </head>
     <body>
 
-        <form action="recebe.php" method="post">
+        <form action="cadastrar.php" method="post">
             <p>
-                Nome:  <input size= "30" type="text" name="username" value="George Barros" />
+                Nome:  <input size= "30" type="text" name="username" />
             </p>
             <p>
-                E-mail: <input size= "30" type="text" name="email"  value="george.barros@ifgoiano.edu.br" />
+                E-mail: <input size= "30" type="text" name="email" />
             </p>
             <p>
                 <input type="submit" value="Enviar" />
