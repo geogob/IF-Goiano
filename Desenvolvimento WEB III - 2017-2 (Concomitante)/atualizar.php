@@ -1,10 +1,9 @@
 <?php 
 //Recebe 
 	    $id= $_GET['id'];
-	    echo $id;
+	    //echo $id;
 
 	    include "form2.php";
-
 
 
 echo '<form action="atualizar-form.php?id='.$id.'" method="post">';

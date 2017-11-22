@@ -5,7 +5,7 @@
 
 //INICIA A SESSÃO
 session_start();
- 
+$_SESSION["x"] = 1;
 $_SESSION["nome"] = "George";
 echo $_SESSION["nome"], "<br>"; 
  
@@ -19,6 +19,6 @@ if (session_destroy()) {
     echo "Não foi possível destruir a sessão <br>";
 }
 
-echo $_SESSION["nome"];
+echo $_SESSION["x"];
 
 ?>

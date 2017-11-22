@@ -2,6 +2,7 @@
 //INICIO A SESSÃO
 session_start();
  
+
 $login = array("user01", "user02", "user03", "user04", "user05");
 $senha = array("senha01", "senha02", "senha03", "senha04", "senha05");
  

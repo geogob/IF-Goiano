@@ -8,22 +8,14 @@ include "form2.php";
 
 	    //Recebe 
 	    $id= $_GET['id'];
-	      //Recebe 
+	     
+	     //Recebe 
 	    $nome= $_POST['username'];
 	    $email= $_POST['email'];
 	    
 	    echo $id;
 		echo $nome;
 		echo $email;
-	    /*Consulta SQL de inserção:
-		$query = "SELECT * FROM user WHERE id_user = $id"; 
-		$result = @mysqli_query($link, $query);
-
-		while ($registro = mysqli_fetch_assoc($result)) {
-			$nome = $registro["Nome"];
-			$email = $registro["Email"];
-			$id = $registro["id_user"];
-		}*/
 
 		$query ="UPDATE user SET Nome = '$nome', Email = '$email' WHERE id_user = $id";
  		$result = @mysqli_query($link, $query);
