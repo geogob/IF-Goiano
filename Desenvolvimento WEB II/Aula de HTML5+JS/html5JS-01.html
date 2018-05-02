@@ -9,39 +9,67 @@
 	</style>
 </head>
 <body>
-	<canvas id="meu_canvas" width="400" height="400">
+	
+	<h2>JOGOS FAMINTOS MORTAIS: A REVOLTA</h2>
+	<h4>George Oliveira Barros</h4>
+	<canvas id="meu_canvas" width="600" height="600">
 			Se você está lendo essa mensagem significa que o seu navegador não suporta canvas.
 	</canvas>
+
 	<script>
-// Canvas e contexto
-var canvas = document.getElementById('meu_canvas');
-var context = canvas.getContext('2d');
-// Preenchimento vermelho
-context.fillStyle = 'red';
-context.fillRect(50, 50, 100, 100);
-// Contorno azul, com espessura de 3px
-context.lineWidth = 3;
-context.strokeStyle = 'blue';
-context.strokeRect(50, 50, 100, 100)
+		// Canvas e contexto
+		var canvas = document.getElementById('meu_canvas');
+		var context = canvas.getContext('2d');
+		// Preenchimento vermelho
+		context.fillStyle = 'red';
+		context.fillRect(50, 50, 100, 100);
+		// Contorno azul, com espessura de 3px
+		context.lineWidth = 5;
+		context.strokeStyle = 'black';
+		context.strokeRect(40, 40, 100, 100);
 
-/*
-// Iniciar o caminho (apaga desenhos anteriores)
-context.beginPath();
-// Desenhar uma estrela
-context.moveTo(75, 250); // Ponto inicial
-context.lineTo(150, 50);
-context.lineTo(225, 250);
-context.lineTo(50, 120);
-context.lineTo(250, 120);
-context.lineTo(75, 250);
-// Configurar a linha
-context.lineWidth = 2;
-context.strokeStyle = 'red';
-// Traçar as linhas do caminho
-context.stroke();
-*/
+		context.fillRect(450, 450, 100, 100);
+		context.strokeRect(460, 460, 100, 100);
 
-//ATIVIDADES - DESENHE ALGO LEGAL COM LINHAS RETAS
+		context.fillRect(450, 50, 100, 100);
+		context.strokeRect(460, 40, 100, 100);
+
+		context.fillRect(50, 450, 100, 100);
+		context.strokeRect(40, 460, 100, 100);
+
+		context.fillRect(250, 250, 100, 100);
+		context.strokeRect(250, 250, 100, 100);
+
+		context.fillRect(50, 250, 100, 100);
+		context.strokeRect(40, 250, 100, 100);
+
+		context.fillRect(450, 250, 100, 100);
+		context.strokeRect(460, 250, 100, 100);
+
+		context.fillRect(250, 50, 100, 100);
+		context.strokeRect(250, 40, 100, 100);
+
+		context.fillRect(250, 450, 100, 100);
+		context.strokeRect(250, 460, 100, 100);
+
+		/*
+		// Iniciar o caminho (apaga desenhos anteriores)
+		context.beginPath();
+		// Desenhar uma estrela
+		context.moveTo(75, 250); // Ponto inicial
+		context.lineTo(150, 50);
+		context.lineTo(225, 250);
+		context.lineTo(50, 120);
+		context.lineTo(250, 120);
+		context.lineTo(75, 250);
+		// Configurar a linha
+		context.lineWidth = 2;
+		context.strokeStyle = 'red';
+		// Traçar as linhas do caminho
+		context.stroke();
+		*/
+
+		//ATIVIDADES - DESENHE ALGO LEGAL COM LINHAS RETAS
 </script>
 </body>
 </html>
