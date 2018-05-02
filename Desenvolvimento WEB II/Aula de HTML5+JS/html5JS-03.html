@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5+JS 02</title>
+	<style type="text/css">
+		#meu_canvas {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="meu_canvas" width="400" height="400">
+		Se você está lendo essa mensagem significa que o seu navegador não suporta canvas.
+	</canvas>
+					<script>
+						//	Canvas	e	contexto
+						var	canvas	=	document.getElementById('meu_canvas');
+						var	context	=	canvas.getContext('2d');
+						//	Cores	e	espessura	da	linha
+						context.fillStyle	=	'gray';
+						context.strokeStyle	=	'black';
+						context.lineWidth	=	2;
+						//	continua...
+						/*	//	Exemplo	teórico
+						context.arc(
+									50,															//	X	(centro)
+									50,															//	Y	(centro)
+									40,															//	Raio
+									90*Math.PI/180,			//	Início:	90	graus
+									270*Math.PI/180,		//	Término:	270	graus
+									false													//	Sentido	anti-horário
+						);*/
+
+
+						//	Primeiro	arco:
+						//	Novo	path
+						context.beginPath();
+						//	Desenha
+						context.arc(50,	50,	40,	90*Math.PI/180,	270*Math.PI/180,	
+									false);
+						//	Preenchimento
+						context.fill();
+						//	Contorno
+						context.stroke();
+
+						//	Segundo	arco
+						context.beginPath();
+						context.arc(150,	50,	40,	90*Math.PI/180,	270*Math.PI/180,	
+									true);
+						context.fill();
+						context.stroke();
+
+						//	Circunferência	completa
+						context.beginPath();
+						context.arc(250,50,	40,	0,	2*Math.PI);
+						context.fill();
+						context.stroke();
+					</script>
+</body>
+</html>
