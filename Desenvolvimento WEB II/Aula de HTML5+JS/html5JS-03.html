@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>HTML5+JS 02</title>
+	<title>HTML5+JS 03</title>
 	<style type="text/css">
 		#meu_canvas {
 			border: 1px solid black;
@@ -9,52 +9,60 @@
 	</style>
 </head>
 <body>
-	<canvas id="meu_canvas" width="400" height="400">
+	<h2>JOGOS FAMINTOS MORTAIS: A REVOLTA</h2>
+	<h4>George Oliveira Barros</h4>
+	<canvas id="meu_canvas" width="600" height="600">
 		Se você está lendo essa mensagem significa que o seu navegador não suporta canvas.
 	</canvas>
-					<script>
-						//	Canvas	e	contexto
-						var	canvas	=	document.getElementById('meu_canvas');
-						var	context	=	canvas.getContext('2d');
-						//	Cores	e	espessura	da	linha
-						context.fillStyle	=	'gray';
-						context.strokeStyle	=	'black';
-						context.lineWidth	=	2;
-						//	continua...
+	<script>
+		//	Canvas	e	contexto
+		var	canvas	=	document.getElementById('meu_canvas');
+		var	context	=	canvas.getContext('2d');
+		//	Cores	e	espessura	da	linha
+		context.fillStyle	=	'red';
+		context.strokeStyle	=	'black';
+		context.lineWidth	=	5;
+					
 						/*	//	Exemplo	teórico
 						context.arc(
-									50,															//	X	(centro)
-									50,															//	Y	(centro)
-									40,															//	Raio
+									50,			//	X	(centro)
+									50,			//	Y	(centro)
+									40,			//	Raio
 									90*Math.PI/180,			//	Início:	90	graus
-									270*Math.PI/180,		//	Término:	270	graus
+									270*Math.PI/180,		//	Término: 270	graus
 									false													//	Sentido	anti-horário
 						);*/
 
 
-						//	Primeiro	arco:
-						//	Novo	path
+						//	Circunferência	completa
 						context.beginPath();
-						//	Desenha
-						context.arc(50,	50,	40,	90*Math.PI/180,	270*Math.PI/180,	
-									false);
-						//	Preenchimento
+						context.arc(300,300, 70, 0,	2*Math.PI);
 						context.fill();
-						//	Contorno
 						context.stroke();
 
-						//	Segundo	arco
+						//	Circunferência	esquerda superior
 						context.beginPath();
-						context.arc(150,	50,	40,	90*Math.PI/180,	270*Math.PI/180,	
-									true);
+						context.arc(100,100, 70, 90*Math.PI/180, 270*Math.PI/180);
+						context.fill();
+						context.stroke();
+
+						//	Circunferência	direita inferior
+						context.beginPath();
+						context.arc(500,500, 70, 270*Math.PI/180, 90*Math.PI/180);
 						context.fill();
 						context.stroke();
 
 						//	Circunferência	completa
 						context.beginPath();
-						context.arc(250,50,	40,	0,	2*Math.PI);
+						context.arc(100,500, 70, 90*Math.PI/180, 270*Math.PI/180);
 						context.fill();
 						context.stroke();
-					</script>
+
+						//	Circunferência	completa
+						context.beginPath();
+						context.arc(500,100, 70, 270*Math.PI/180,	90*Math.PI/180);
+						context.fill();
+						context.stroke();
+	</script>
 </body>
 </html>
