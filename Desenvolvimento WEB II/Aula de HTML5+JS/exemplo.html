@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aula 01</title>
+	<style type="text/css">
+		#canvas{
+			border: 1px solid black;
+		}	
+	</style>
+</head>
+<body>
+<h2>Guerras Destruidoras Estelares 2</h2>	
+<canvas id="canvas" width="400" height="400">
+
+<script type="text/javascript">
+	var canvas = document.getElementById('canvas');
+	//Criando um elemento 2d
+	var context = canvas.getContext('2d');
+	//Criando um retângulo.....
+		//Cor de preenchimento do elemento
+		//context.fillStyle="green";
+		//Tamanho e Posição do elemento na tela 
+		//context.fillRect(175,0,50,150);
+		//Cor da borda do elemento
+		//context.strokeStyle = "orange";
+		//context.lineWidth=5;
+		//Tamanho e Posição da borda do elementp na tela
+		//context.strokeRect(175,0,50,150);
+
+	//Desenhando na tela
+		context.beginPath();
+		context.moveTo(75, 250);
+		context.lineTo(150, 50);
+		context.lineTo(225, 250);
+		context.lineTo(50, 120);
+		context.lineTo(250, 120);
+		context.lineTo(75, 250);
+		context.fillRect(20,20,270,270);
+		context.strokeStyle = "white";
+		context.lineWidth = 5;
+		context.stroke();
+
+</script>
+</body>
+</html>

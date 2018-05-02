@@ -1,0 +1,31 @@
+TABLE.notas{
+	text-align : center;
+	font-family : Tahoma;
+	font-size : 12px;
+}
+
+TH {
+	font-style : italic;
+}
+
+TH.nomes {
+	background-color : Pink;
+}
+
+TH.final {
+	background-color : Red;
+}
+
+TH.cabecalho {
+	color : Blue;
+}
+
+TD.valores {
+	background-color : Yellow;
+	color : Green;
+}
+
+CAPTION{
+	font-size: x-small;
+}
+
