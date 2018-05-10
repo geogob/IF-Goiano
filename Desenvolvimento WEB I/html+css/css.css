@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container div {
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  background-color: #ff7d7d;
+}
+
+.orange {
+  background-color: #ffc158;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: #a6eaa6;
+}
+
+.blue {
+  background-color: #94c1ff;
+}
+
+.purple {
+  background-color: #c380c3;
+}
+
+
+:root {
+  --headerHeight: 60px;
+  --middleHeight: 300px;
+  --footerHeight: 100px;
+}
+
+
+/* Flexbox Fallback */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.red {
+  flex-basis: 100%;
+  height: 60px;
+}
+
+.orange {
+  flex: 1;
+}
+
+.yellow {
+  flex: 3;
+  height: var(--middleHeight);
+}
+
+.green {
+  flex-basis: 100%;
+  height: var(--footerHeight);
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5+JS 06</title>
+	<style type="text/css">
+		#meu_canvas {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+
+		<canvas	id="meu_canvas"	width="500"	height="500"></canvas>
+			<script>
+						//	Canvas	e	contexto
+						var	canvas	=	document.getElementById('meu_canvas');
+						var	context	=	canvas.getContext('2d');
+						
+						//	Um	pequeno	quadrado	verde
+						context.fillStyle	=	'green';						
+						context.fillRect(50, 50, 25, 25);
+						//	Salvamos	a	configuração	e	subimos	na	pilha
+						context.save();
+
+						context.fillStyle = 'pink';
+						context.fillRect(80,80,25,25);
+						context.save();
+
+						context.fillStyle = 'orange';
+						context.fillRect(110,110,25,25);
+						context.save();			
+
+						
+						context.restore();
+						context.restore();
+						//	Voltou	para	o	verde!
+						context.fillRect(150, 50, 25, 25);			
+			</script>
+</body>
+</html>

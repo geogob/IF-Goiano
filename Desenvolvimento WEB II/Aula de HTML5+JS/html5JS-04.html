@@ -9,10 +9,12 @@
 	</style>
 </head>
 <body>
-	<h2>JOGOS FAMINTOS MORTAIS: A REVOLTA</h2>
-	<h4>George Oliveira Barros</h4>
 
-		<canvas	id="meu_canvas"	width="500"	height="500"></canvas>
+
+		<center>
+		<h2>JOGOS FAMINTOS MORTAIS: A REVOLTA</h2>
+		<h4>George Oliveira Barros</h4>
+		<canvas	id="meu_canvas"	width="500"	height="500"></canvas></center>
 		<script>
 		/*Exemplo teórico
 		//	Carregando	uma	imagem	programaticamente
@@ -25,17 +27,29 @@
 		//Canvas	e	contexto
 		var	canvas	=	document.getElementById('meu_canvas');
 		var	context	=	canvas.getContext('2d');
+		
 		//	Carregar	a	imagem
 		var	imagem	=	new	Image();
 		imagem.src	=	'img/ovni.png';
-		imagem.onload	=	function()	{
+
+		var imagem2 = new Image();
+		imagem2.src = 'img/foguete.png';
+
+		imagem.onload	=	function(){
+				//context.drawImage(imagem, 210, 210, 74, 62);
 				//	Começar	na	posição	20
-				var	x	=	20;
+				var	x =	20;
 				//	Desenhar	as	imagens
-				for	(var	i	=	1;	i	<=	5;	i++)	{
-						context.drawImage(imagem,	x,	20,	64,	32);
-						x	+=	70;
+				for	(var i = 1;	i <= 5; i++){
+						context.drawImage(imagem, x, 400, 64, 57);
+						x	+=	90;
 				}
+				x = 20;
+				for	(var i = 1; i <= 5;	i++){
+						context.drawImage(imagem2, x, 20, 54, 62);
+						x	+=	90;
+				}
+				
 		}
 		</script>
 </body>
