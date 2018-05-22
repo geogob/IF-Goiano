@@ -1,0 +1,37 @@
+<!--	arquivo	teste-teclado-2.html	-->
+<!DOCTYPE	html>
+<html>
+<head>
+			<title>Movimentando	personagem	com	classe	JavaScript</title>
+			<script	src="teclado.js"></script>
+</head>
+<body>
+			<canvas	id="canvas_teclado_2"	width="500"	height="500">
+			</canvas>
+			<script>
+					var	canvas	=	document.getElementById('canvas_teclado_2');
+					var	context	=	canvas.getContext('2d');
+					var	posicao	=	0;
+					
+					desenharPersonagem();
+					
+					var	teclado	= new Teclado(document);
+					
+					requestAnimationFrame(animar);
+					
+					function animar()	{
+						if	(teclado.pressionada(SETA_ESQUERDA))
+							posicao	-=	10;
+						else if	(teclado.pressionada(SETA_DIREITA))
+									posicao	+=	10;
+						desenharPersonagem();
+					}	
+
+					//	Nosso	herói	continua	esbanjando	charme!	:D
+					function desenharPersonagem(){
+							context.clearRect(0, 0,	canvas.width, canvas.height);
+							context.fillRect(posicao, 100, 20, 50);
+					}			
+			</script>
+</body>
+</html>

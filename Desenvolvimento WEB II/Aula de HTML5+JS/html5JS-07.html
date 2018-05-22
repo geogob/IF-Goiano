@@ -35,14 +35,36 @@
 							context.fill();
 							context.fillStyle = 'pink';
 							context.stroke();
+							context.save();
 
 							context.beginPath();
 							context.arc(x_2,y_2, 70, 0,	2*Math.PI);
 							context.fill();
+							context.fillStyle = 'gray';
 							context.stroke();
+							context.save();
 
+							context.beginPath();
+							context.arc(100,y_2, 18, 0,	2*Math.PI);
+							context.fill();
+							context.fillStyle = 'red';
+							context.stroke();
+							context.save();
+
+							context.beginPath();
+							context.arc(40, x, 38, 0, 2*Math.PI);
+							context.fill();
+							context.fillStyle = 'blue';
+							context.stroke();
+							context.save();
+
+							context.beginPath();
+							context.arc(x_2,x_2, 58, 0,	2*Math.PI);
+							context.fill();
+							context.fillStyle = 'green';
+							context.stroke();
 							//	Deslocar	20	pixels	para	a	direita
-							x+=5;
+							x+=3;
 							y_2 += 1;
 
 							if (y_2>=500) {

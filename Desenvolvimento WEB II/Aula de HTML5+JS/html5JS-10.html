@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Animação pt.01</title>
+	<meta charset="utf-8">
+</head>
+<!-- comando CSS para atribuir uma borda ao canvas -->
+<style>
+	body{
+		font-family: "New Century Schoolbook";
+		background-color: #f5f5dc;
+	}
+	canvas{
+		background-color: white;
+		border: 1px solid black;
+	}
+</style>
+<body>
+	<!-- Elemento canvas no HTML -->
+	<center>
+		<h2>Jogos Famintos Mortais: A REVOLTA</h2>
+	<h4>George Oliveira Barros</h4>
+		<canvas width="600" height="600"></canvas>
+	</center>
+	<script>
+		//Variáveis
+		//Código das setas do teclado
+		var UP = 38, DOWN = 40, LEFT = 37, RIGHT = 39;
+		//Variáveis de movimentação
+		var moveEsquerda = false, moveDireita = false, moveCima = false, moveBaixo = false;
+		//Referência ao canvas
+		var cnv = document.querySelector("canvas");
+		//dispositivo através do qual desenhamos no canvas
+		var ctx = cnv.getContext("2d");
+		//Objeto com seus atributos de posicionamento nos eixos X e Y
+		var p1 = {
+			x: 10,
+			y: 10
+		};
+		
+		//Inicia o loop de animação
+		update();
+
+		//Dispara um evento quando uma tecla é pressionada
+		window.addEventListener("keydown",keydownHandler);
+		//Dispara um evento quando uma tecla é liberada
+		window.addEventListener("keyup",keyupHandler);
+
+		//Evento disparado pela tecla pressionada
+		function keydownHandler(e){
+			//Variável recebe o código da tecla pressionada
+			var key = e.keyCode;
+			//Esquerda
+			if(key === LEFT && key !== RIGHT){
+				moveEsquerda = true;
+			}
+			//Direita
+			if(key === RIGHT && key !== LEFT){
+				moveDireita = true;
+			}
+			//Para Cima
+			if(key === UP && key !== DOWN){
+				moveCima = true;
+			}
+			//Para Baixo
+			if(key === DOWN && key !== UP){
+				moveBaixo = true;
+			}
+		}
+
+		//Evento disparado pela tecla liberada
+		function keyupHandler(e){
+			//Variável recebe o código da tecla liberada
+			var key = e.keyCode;
+			//Esquerda
+			if(key === LEFT && key !== RIGHT){
+				moveEsquerda = false;
+			}
+			//Direita
+			if(key === RIGHT && key !== LEFT){
+				moveDireita = false;
+			}
+			//Para Cima
+			if(key === UP && key !== DOWN){
+				moveCima = false;
+			}
+			//Para Baixo
+			if(key === DOWN && key !== UP){
+				moveBaixo = false;
+			}
+		}
+
+		//Função que atualiza os parâmetros de posicionamento do objeto nos eixos X e Y
+		function move(){
+			//Move para a esquerda
+			if(moveEsquerda){
+				p1.x-=3;
+			}
+			//Move para a direita
+			if(moveDireita){
+				p1.x+=3;
+			}
+			//Move para cima
+			if(moveCima){
+				p1.y-=3;
+			}
+			//Move para baixo
+			if(moveBaixo){
+				p1.y+=3;
+			}
+		}
+
+		//Função que desenha o objeto na tela de acordo com os parâmetros de posicionamento do objeto
+		function render(){
+			//Limpa a tela
+			ctx.clearRect(0,0,cnv.width,cnv.height);
+			//Desenha o objeto em função de p1.x e p1.y
+			ctx.fillRect(p1.x,p1.y,30,30);
+			ctx.fillStyle = '#995930';
+		}
+
+		//Loop de animação
+		function update(){
+			//Solicita ao navegador uma animação passando a função e o elemento a ser animado
+			requestAnimationFrame(update, cnv);
+			//Atualiza os dados do objeto
+			move();
+			//Desenha o objeto atualizado
+			render();
+		}
+	</script>
+</body>
+</html>
