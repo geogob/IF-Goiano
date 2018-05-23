@@ -3,6 +3,10 @@
 var	SETA_ESQUERDA	=	37;
 var	SETA_DIREITA	=	39;
 var	ESPACO	=	32;
+var ENTER = 13;
+var SETA_UP = 40;
+var SETA_DOWN = 38;
+
 function	Teclado(elemento)	{
 			this.elemento	=	elemento;
 			//	Array	de	teclas	pressionadas

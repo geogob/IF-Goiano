@@ -1,0 +1,100 @@
+<!--	arquivo	teste-teclado-2.html	-->
+<!DOCTYPE	html>
+<html>
+<head>
+			<title>Movimentando	personagem	com	classe	JavaScript</title>
+			<script	src="teclado.js"></script>
+</head>
+<style type="text/css">
+	body{
+		background: gray;
+	}
+
+	#canvas_teclado_2{
+		border: 1px solid black;
+		background: white;
+	}
+</style>
+<body>
+			<center><canvas	id="canvas_teclado_2"	width="500"	height="500">
+			</canvas></center>
+			<script>
+					var	canvas	= document.getElementById('canvas_teclado_2');
+					var	context	= canvas.getContext('2d');
+
+					var	posicaoX = 0;
+					var posicaoY = 0;
+					var h = 20;
+
+					desenharPersonagem();
+					var	teclado	=	new	Teclado(document);
+					requestAnimationFrame(animar);
+					
+					function	animar()	{
+									if	(teclado.pressionada(SETA_ESQUERDA))
+												posicaoX -=	10;
+									else if	(teclado.pressionada(SETA_DIREITA))
+												posicaoX +=	10;
+									else if (teclado.pressionada(SETA_UP))
+												posicaoY += 10;
+									else if (teclado.pressionada(SETA_DOWN)) 
+												posicaoY -=10;
+									else if (teclado.pressionada(ENTER))
+												h=40;
+									else if (teclado.pressionada(ESPACO))
+												h=20;
+
+									desenharPersonagem();
+									requestAnimationFrame(animar);
+					}
+
+					//	Nosso	herói	continua	esbanjando	charme!	:D
+					function	desenharPersonagem()	{
+									
+									context.clearRect(0,	0,	canvas.width,	canvas.height);
+									context.fillRect(posicaoX,	posicaoY,	10,	h);
+									
+									if (h>=40) {
+										//condições para ultrapassar a reaparecer
+										if (posicaoY>500) {
+											posicaoY=0;
+										}
+										
+										if (posicaoY<0) {
+											posicaoY=500;
+										}
+
+										if (posicaoX>500) {
+											posicaoX=0;
+										}
+										
+										if (posicaoX<0) {
+											posicaoX=500;
+										}
+									}else{
+										//condições para travar
+										if (posicaoY>=490) {
+											posicaoY=480;
+										}
+										
+										if (posicaoY<=0) {
+											posicaoY=0;
+										}
+
+										if (posicaoX>=490) {
+											posicaoX=490;
+										}
+										
+										if (posicaoX<=0) {
+											posicaoX=0;
+										}
+									}
+
+
+					}
+					
+	
+					
+			</script>
+</body>
+</html>
