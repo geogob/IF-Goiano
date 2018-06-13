@@ -14,15 +14,12 @@
 <body>
    <canvas id="canvas_spritesheet_1" width="800" height="400"></canvas>
    <script>
-      var context = document.getElementById('canvas_spritesheet_1')
-                    .getContext('2d');
-
+      var context = document.getElementById('canvas_spritesheet_1').getContext('2d');
       var imgSonic = new Image(); 
       imgSonic.src = 'spritesheet.png'; 
 
       // Quero passar: context, imagem, linhas, colunas 
       var sheet = new Spritesheet(context, imgSonic, 3, 8); 
-
       // Duração de cada quadro 
       sheet.intervalo = 60;
 
@@ -44,6 +41,8 @@
 
          requestAnimationFrame(gameLoop); 
       }
+   
+      
    </script>
 </body>
 

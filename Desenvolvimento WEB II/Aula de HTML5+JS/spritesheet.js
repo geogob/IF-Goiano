@@ -7,6 +7,7 @@ function Spritesheet(context, imagem, linhas, colunas) {
    this.linha = 0; 
    this.coluna = 0; 
 } 
+
 Spritesheet.prototype = { 
    proximoQuadro: function() {
       var agora = new Date().getTime(); 
