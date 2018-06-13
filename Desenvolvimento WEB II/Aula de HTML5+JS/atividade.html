@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5+JS 07</title>
+	<style type="text/css">
+		#meu_canvas {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+		<canvas	id="meu_canvas"	width="500"	height="500"></canvas>
+		<script>
+						//	Canvas	e	contexto
+						canvas	=	document.getElementById('meu_canvas');
+						context	=	canvas.getContext('2d');
+						
+						//	Dados	da	bola
+						var	x	=	220;
+						var	y	=	100;
+						estado = 0;
+						var	raio	=	25;
+						//	Iniciar	a	animação
+						requestAnimationFrame(mexerBola);
+						
+						//	Função	de	animação
+						function mexerBola()	{
+							//	Limpar	o	Canvas
+							context.clearRect(0,	0,	canvas.width,	canvas.height);
+							//	Desenhar	a	bola
+							context.beginPath();
+							context.arc(x,	y,	raio,	0,	Math.PI*2);
+							context.fill();
+							context.fillStyle = 'red';
+							context.stroke();
+							context.save();
+							//Controle do estado
+							if (estado==0) {
+								y++;
+							}
+							if (estado==1) {
+								x++;
+							}
+							if (estado==2) {
+								x--;
+							}
+							if (estado==3) {
+								y--;
+							}
+							
+							//Controle das fronteiras
+							if (y>=500) {
+								y=220;
+								x=-100;
+								estado = 1;
+							}
+
+							if (x>=500) {
+								y=220;
+								x=500;
+								estado = 2;
+							}
+
+							if (x<=0 && estado==2) {
+								x=220;
+								y=500;
+								estado = 3;
+							}
+							
+							//	Chamar	o	próximo	ciclo	da	animação
+							requestAnimationFrame(mexerBola);
+						}
+			</script>
+</body>
+</html>
