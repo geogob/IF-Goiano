@@ -1,0 +1,25 @@
+#grandona{
+	width: 100%;
+	height: 800px;
+	background-color: #87ceeb;
+	padding: 0px;
+	margin: 0px;
+
+}
+
+#esquerda{
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin-left: 700px;
+	background-color: #32cd32;
+	margin-top: 300px;
+}
+
+#direita{
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin-top: 300px;
+	background-color: yellow;
+}
