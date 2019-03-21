@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Gestão de Produção de Leite</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Enhance Required Form Fields with CSS3" />
+        <meta name="keywords" content="form, html5, css3, animated, transition, required, filter" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+		<!--[if lt IE 8]>
+			<style>
+				.af-wrapper{display:none;}
+				.ie-note{display:block;}
+			</style>
+		<![endif]-->
+    <script type="text/javascript">
+    	function calcular(){
+    		var totalLeiteProd = form1.leiteTotalProd.value;
+    		var preckgleite = form1.preckgleite.value;
+    		var vacalac = form1.vacalac.value;
+    		var vacasec = form1.vacasec.value;
+    		var nova = form1.nova.value;
+    		var beza = form1.beza.value;
+    		var touro = form1.touro.value;
+    		var bezo = form1.bezo.value;
+    		var novo = form1.novo.value;
+
+    		var rac = form1.rac.value;
+    		var sila = form1.sila.value;
+    		var feno = form1.feno.value;
+    		var capim = form1.capim.value;
+    		var sal = form1.sal.value;
+    		var func = form1.func.value;
+
+    		if (totalLeiteProd=="" || totalLeiteProd==null || preckgleite==null || preckgleite=="" || vacalac==null || vacalac=="" || vacasec==null || vacasec=="" || nova==null || nova=="" || beza==null || beza=="" || touro== null || touro=="" || bezo==null ||bezo=="" || novo==null || novo=="" || rac==null || rac=="" || sila==null || sila=="" || feno==null || feno=="" || capim==null || capim==""|| sal==null || sal=="" || func==null || func=="") {
+				window.alert("Todos os campos precisam ser preenchidos" );    			
+    		}else{
+    			//Converter dados do formulaŕio pra INteiro ou Float antes de realizar os cálculos
+    			// parseInt()
+    			//parseFloat()
+    			totalLeiteProd = parseInt(totalLeiteProd);
+    			preckgleite = parseFloat(preckgleite);
+    			vacalac = parseInt(vacalac);
+    			vacasec = parseInt(vacasec);
+    			nova = parseInt(nova);
+    			beza = parseInt(beza);
+    			touro = parseInt(touro);
+    			bezo = parseInt(bezo);
+    			novo = parseInt(novo);
+    			rac = parseInt(rac);
+    			sila = parseInt(sila);
+    			feno = parseInt(feno);
+    			capim = parseInt(capim);
+    			sal = parseInt(sal);
+    			func = parseInt(func);
+
+    			//Resultados
+    			var rebanhoTotal = (vacasec+vacalac+nova+beza+bezo+touro+novo);
+    			var prodMedVacaDia = totalLeiteProd/vacalac;
+
+
+    			window.alert(
+    				"RELATÓRIO FINAL \n" +
+    				" Rebanho total: " + rebanhoTotal + "\n" +
+    				" Produção média de cada vaca por dia: " + prodMedVacaDia + "\n" +
+    				"ERROR - Valor com venda do leite por dia: "+ preckgleite + "\n"+
+
+    				" Custo Total do leite por mês: " + (rac+sila+feno+capim+sal+1050+80+50+12) + "\n" +
+    				" Média do custo total do leite por dia" + (rac+sila+feno+capim+sal+1050+80+50+12)/30 + "\n"+
+    				"------------------------------------------------- \n"+
+    				"Despesas mensais: \n"+
+    				" Despesas com alimentação por mês: " + (rac+sila+feno+capim+sal) + "\n"+
+    				" Despesas com mão de obra por mês: 1050 \n"+
+    				" Despesas com combustível por mês: 80 \n"+
+    				" Despesas com sanidade por mês: 50 \n"+
+    				" Outras: 12 \n"+
+    				" Despesas com alimentação por dia: " + (rac+sila+feno+capim+sal)/30 + "\n"+
+    				" Despesas com mão de obra: " + func + "\n"+
+    				" Despesas com funcionário por dia: " + (func/30) + "\n"+
+    				"------------------------------------------------- \n"+
+    				" Custo por Kg do leite: " + ((rac+sila+feno+capim+sal+1050+80+50+12)/30)/totalLeiteProd + "\n"+
+    				" Receita líquida por kg do leite: " + (preckgleite - ((rac+sila+feno+capim+sal+1050+80+50+12)/30)/totalLeiteProd) + "\n"+
+    				" Lucro total por dia"+ (totalLeiteProd*(preckgleite - ((rac+sila+feno+capim+sal+1050+80+50+12)/30)/totalLeiteProd)) + "\n"+
+    				"Despesa Diária"+ ((preckgleite*totalLeiteProd) - (totalLeiteProd*(preckgleite - ((rac+sila+feno+capim+sal+1050+80+50+12)/30)/totalLeiteProd))) + "\n"
+    				);	
+    		}
+
+    			
+    	}
+
+
+    	
+    </script>
+    </head>
+    <body>
+        <div class="container">	
+			<header>
+				<img src="l.jpg" width="120px" height="120px">
+
+				<h1>Gestão de Produção de<span> Leite</span></h1>
+				<span>Software</span>
+				<p>Atenção: Este sistema apresenta apenas uma estimativa de informações geradas a partir dos seus dados de produção.</p>
+				<p class="ie-note">D'oh!</p>
+			</header>
+			
+			<section class="af-wrapper">
+	            <center><h3>Digite apenas números.</h3></center>
+		        
+						
+				<form name="form1" class="af-form" id="af-form" novalidate>
+				<div class="af-outer">
+					<h3>Informações gerais: </h3>	
+				</div>
+						<div class="af-outer">
+								<div class="af-inner">
+									<label for="input-title">Total de leite produzido/dia </label> 
+									<input type="text" name="leiteTotalProd" id="input-title"> (Em litros)
+								</div>
+							</div>
+						
+							<div class="af-outer">
+								<div class="af-inner">
+									<label for="input-title">Preço Kg do leite</label>
+									<input type="text" name="preckgleite" id="input-title"> (Ex: 1,15)
+								</div>
+							</div>
+						<div class="af-outer">
+				<h3>Rebanho:</h3>	
+				</div>
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">Vaca(s) Lactante(s)</label> 
+							<input type="text" name="vacalac" id="input-title"> (Ex: 20)
+						</div>
+					</div>
+				
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">Vaca(s) Seca(s)</label>
+							<input type="text" name="vacasec" id="input-title">
+						</div>
+					</div>
+
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">Novilha(s)</label>
+							<input type="text" name="nova" id="input-title">
+						</div>
+					</div>
+
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">Bezerra(s)</label>
+							<input type="text" name="beza" id="input-title">
+						</div>
+					</div>
+
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">Touro(s)</label>
+							<input type="text" name="touro" id="input-title">
+						</div>
+					</div>
+
+					<div class="af-outer af-required">
+						<div class="af-inner">
+							<label for="input-name">Bezerro(s)</label>
+							<input type="text" name="bezo" id="input-name" required>
+						</div>
+					</div>
+					
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">Novilho(s)</label>
+							<input type="text" name="novo" id="input-title">
+						</div>
+					</div>
+					<div class="af-outer">
+					<h3>Alimentação: (por mês)</h3>	
+					</div>
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">Ração concentrada</label>
+							<input type="text" name="rac" id="input-title"> (Ex: 80)
+						</div>
+					</div>
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">Silagem</label>
+							<input type="text" name="sila" id="input-title"> 
+						</div>
+					</div>
+
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">Feno</label>
+							<input type="text" name="feno" id="input-title"> 
+						</div>
+					</div>
+
+					<div class="af-outer">
+						<div class="af-inner">
+							<label for="input-title">Capim</label>
+							<input type="text" name="capim" id="input-title"> 
+						</div>
+					</div>
+					<div class="af-outer">
+					<div class="af-inner">
+							<label for="input-title">Sal mineral</label>
+							<input type="text" name="sal" id="input-title"> 
+						</div>
+					</div>
+					<div class="af-outer">
+					<h3>Despesas: (R$/mês)</h3>	
+					</div>
+
+					<div class="af-outer">
+					<div class="af-inner">
+							<label for="input-title">Funcionário</label>
+							<input type="text" name="func" id="input-title"> (Ex: 1050)
+						</div>
+					</div>
+					
+					<input type="submit" value="Calcular" onclick="return calcular()" /> 
+					
+				</form>
+			</section>
+        </div>
+    </body>
+</html>
