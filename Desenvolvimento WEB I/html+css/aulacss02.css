@@ -1,0 +1,41 @@
+body{
+	background:gray;
+	font-family: Arial;
+	color: white;
+	font-size: 44px;
+}
+
+#topo{
+	height: 100px;
+	width: 100%;
+	background: black;
+	float: left;
+}
+
+#left{
+	width: 20%;
+	height: 700px;
+	background-color: white;
+	color:pink;	
+	float: left;
+}
+#content{
+	width: 60%;
+	height: 700px;
+	background-color: green;
+	float: left;
+}
+
+#right{
+	width: 20%;
+	height: 700px;
+	background-color: white;
+	float: left;
+	color: pink;
+}
+#footer{
+	height: 100px;
+	width: 100%;
+	background: black;
+	float: left;
+}
