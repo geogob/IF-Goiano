@@ -1,0 +1,70 @@
+body{
+	background-color: #F5F5F5;
+}
+
+#topo{
+	background-color: #283E4A;
+	width: 100%;
+	height: 52px;
+	position: absolute;
+	margin-left: -8px;
+	margin-top: 0px;
+	float:left;
+
+}
+#inicio{
+	background-color: #E1E9EE;
+	width: 100%;
+	height: 300px;
+	margin-left: -8px;
+	margin-top: 50px;
+	float: left;
+}
+
+#conteudo{
+	
+	width: 60%;
+	height: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menu{
+	width: 60%;
+	height: 50px;
+	
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#atalhos{
+	width: 60%;
+	height: 298px;
+	
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#nucleo{
+	background-color: white;
+	
+	width:33%;
+	height: 250px;  
+	margin-top: 20px;
+	margin-left: 1px;
+	float: left;
+}
+
+#ola{
+	margin-top: 30px;
+	height: 340px;
+	width:19%;
+	border: 1px solid gray;
+	float: left;
+}
+#fundo-azul{
+	height: 50px;
+	width:100%;
+	background-color: #0077B5;
+	float: left;
+}
