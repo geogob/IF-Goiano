@@ -2,9 +2,9 @@
 """
 Created on Thu Feb 30 14:55:02 2018
 
-@author: George Oliveira Barros, george_gob@hotmail.com. 
+@author: George Oliveira Barros e Maria Eduarda Ciriaco, george_gob@hotmail.com. 
 
-KNN Classification: Ferrugem em folhas de Soja
+KNN Classification: Ferrugem em folhas de MIlho
 """
 
 print __doc__
@@ -78,7 +78,7 @@ X = X[2:38,:]
 y = y[2:38]
 
 
-fold = 4
+fold = 2
 
 n_neighbors=1
 neigh = KNeighborsClassifier(n_neighbors, weights='uniform', algorithm='auto',  p=1) #KNN = 9 -> Melhor resultado
