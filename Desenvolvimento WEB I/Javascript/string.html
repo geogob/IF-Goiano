@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funções</title>
+</head>
+<body>
+	
+	<input type="text" placeholder="Informe o seu nome" name="nome" id="nome"><br>
+	<input type="text" placeholder="Informe o seu sobrenome" name="sobrenome" id="sobrenome"><br>
+
+	<!--Também pode usar a classe class texto e depois .texto-->
+	<button onclick="minhaFunction()">Por favor, clique aqui</button>
+
+	<script type="text/javascript">
+		function minhaFunction() {
+			
+			var nome = document.querySelector('#nome').value;
+			var sobrenome = document.querySelector('#sobrenome').value;
+
+			//tradicional:
+			alert("Seu nome é: "+nome+" seu sobrenome é: "+sobrenome);
+			//Novo jeito:
+			//alert("Nome:" ${nome} "- sobrenome:" ${sobrenome});
+			//imprimir tipo: alert(typeof texto);
+		}
+	</script>
+</body>
+</html>

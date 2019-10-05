@@ -1,24 +1,26 @@
 <?php 
-include "form2.php";
+//include "form2.php";
 
 //Realizando a conexão com o banco
-	    require 'config.php'; 
-	    require 'conexao.php';
-	    $link = DB_connect();
+require 'config.php'; 
+require 'conexao.php';
+$link = DB_connect();
 
-	    //Recebe 
-	    $id= $_GET['id'];
-	     
-	     //Recebe 
-	    $nome= $_POST['username'];
-	    $email= $_POST['email'];
-	    
-	    echo $id;
-		echo $nome;
-		echo $email;
+//Recebe o id do usuário
+$id= $_GET['id'];
 
-		$query ="UPDATE user SET Nome = '$nome', Email = '$email' WHERE id_user = $id";
- 		$result = @mysqli_query($link, $query);
+//Recebe os dados do usuário
+$nome = $_POST['username'];
+$email = $_POST['email'];
 
-	    DB_Close($link);
+$query ="UPDATE user SET Nome = '$nome', Email = '$email' WHERE id_user = $id";
+$result = @mysqli_query($link, $query);
+
+if ($result) {
+	echo "Atualizado com sucesso!!!";
+}else{
+	echo "Deu ruim!!!";
+}
+
+DB_Close($link);
 ?>

@@ -1,0 +1,24 @@
+body{
+	background-color: gray;
+	font-family: Arial;
+}
+
+h1{
+	color:white;
+	background-color: orange;
+	font-family: Comic Sans MS;
+	font-size: 68px;
+	text-align: justify;
+	float: left;
+}
+
+table{
+	border: 3px solid orange;
+	width: 150px;
+	height: 150px;
+	color: orange;
+	text-align: center;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}

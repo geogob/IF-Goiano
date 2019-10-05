@@ -6,4 +6,5 @@
 	define('DB_DATABASE', 'aula'); //Nome do BD
 	//define('DB_PREFIX', 'dw3');
 	define('DB_CHARSET', 'utf8');	
+	
 ?>

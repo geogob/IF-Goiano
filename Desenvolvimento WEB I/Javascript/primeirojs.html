@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML com JS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<input id="valor1" type="text" placeholder="Digite o valor 1" name="">
+	<input id="valor2" type="text" placeholder="Digite o valor 2" name="">
+	<button onclick="soma()"> Enviar </button>
+	<br>
+	<button onclick="virus()"> Não clique! </button>
+
+	<script type="text/javascript">
+		function soma(){
+			var x1 = document.querySelector('#valor1').value;
+			var x2 = document.querySelector('#valor2').value;
+			x1 = parseInt(x1);
+			x2 = parseInt(x2);
+			var r = x2+x1;
+			alert("O resultado da soma é: "+r);
+		}
+
+		function virus(){
+			alert("Se lascou!");
+			var a=100;
+			do{
+				alert("Trojan $%#2 identificado");
+				a = a-1;
+			}while(a>=0);	
+		}
+	</script>
+
+
+</body>
+</html>

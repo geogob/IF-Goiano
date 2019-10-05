@@ -16,14 +16,14 @@
 		echo '<td>  </td>';
 		echo '</tr>';
 
-		while ($registro = mysqli_fetch_assoc($result)) {
+		while ($registro = mysqli_fetch_assoc($result)){
 			echo '<tr>';
 			echo '<td> <i>'.$registro["Nome"].'</i></td>';
 			echo '<td> <b>'.$registro["Email"].'</b> </td>';
 			$id = $registro["id_user"];
-			echo '<td> <a href="deletar.php?id='.$id.'">Deletar</a> </td>';
-			echo '<td> <a href="atualizar.php?id='.$id.'">Atualizar</a> </td>';
-			echo '</tr>';
+
+			echo '<a href="deletar.php?id='.$id.'">Deletar</a> </td>';
+			echo '<a href="atualizar.php?id='.$id.'">Atualizar</a> </td>';
 		}
 		echo '</table>';
 	    //Fecha Conexão	

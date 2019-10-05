@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funções</title>
+</head>
+<body>
+	
+	<input type="text" placeholder="Informe o número 1" id="n1"><br>
+	<input type="text" placeholder="Informe o número 2" id="n2"><br>
+
+	<!--Também pode usar a classe class texto e depois .texto-->
+	<button onclick="minhaFunction()">Por favor, clique aqui</button>
+
+	<script type="text/javascript">
+		function minhaFunction() {
+			
+			var n1 = parseInt(document.querySelector('#n1').value);
+			var n2 = parseInt(document.querySelector('#n2').value);
+			//parseFloat para decimal
+			var result = n1+n2;
+			//tradicional:
+			alert("A soma é: "+result);
+			//Novo jeito:
+			//alert("Nome:" ${nome} "- sobrenome:" ${sobrenome});
+			//imprimir tipo: alert(typeof texto);
+		}
+	</script>
+</body>
+</html>
